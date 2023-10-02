@@ -16,18 +16,18 @@ type TModalState = IOpenModalProps & {
   onConfirm: () => void;
 };
 
-export const ModalContext = React.createContext({
+export const ModalContext = createContext({
   openModal: (props: IOpenModalProps) => {},
 });
 
 export function ModalProvider({ children }: { children: React.ReactNode }) {
-  const [modals, setModals] = React.useState<TModalState[]>([]);
+  const [modals, setModals] = useState<TModalState[]>([]);
 
-  const closeModal = React.useCallback((id: string) => {
+  const closeModal = useCallback((id: string) => {
     setModals((modalState) => modalState.filter((d) => d.id !== id));
   }, []);
 
-  const openModal = React.useCallback(
+  const openModal = useCallback(
     ({
       header,
       body,
