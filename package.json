@@ -1,5 +1,5 @@
 {
-  "name": "salt-ui-modal",
+  "name": "@ggons/salt-ui-modal",
   "version": "0.0.1",
   "description": "react modal component",
   "scripts": {
@@ -26,5 +26,8 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "type": "module"
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/ggons"
+  }
 }
